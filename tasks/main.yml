@@ -1,0 +1,11 @@
+---
+- name: Stupid test role
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Update apt-cache
+      apt:
+        update_cache: true
+    - name: Do a pinger
+      ping:
